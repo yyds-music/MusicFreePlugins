@@ -9,7 +9,7 @@ function getConfigHash(url, username, password) {
     return CryptoJs.MD5(`${url}:${username}:${password}`).toString();
 }
 async function getServerVersion(url, params) {
-    const response = await axios_1.default.default.get(`${url}/rest/ping`, {
+    const response = await axios_1.default.get(`${url}/rest/ping`, {
         params,
         timeout: 10000
     });

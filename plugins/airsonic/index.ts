@@ -21,7 +21,7 @@ function getConfigHash(url: string, username: string, password: string): string 
 }
 
 async function getServerVersion(url, params): Promise<string | null> {
-    const response = await axios.default.get(`${url}/rest/ping`, {
+    const response = await (axios as any).get(`${url}/rest/ping`, {
         params,
         timeout: 10000
     });
